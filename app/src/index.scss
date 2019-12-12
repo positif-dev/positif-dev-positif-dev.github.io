@@ -1,0 +1,22 @@
+// @TODO
+@import './variables/main';
+@import './variables/external';
+
+body, html {
+  background-color: $black;
+  color: $grey;
+  font-family: $solway;
+  font-size: 15px;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  scrollbar-width: none;
+  user-select: none;
+  width: 100%;
+}
+
+a {
+  color: $grey;
+  text-decoration: none;
+}
