@@ -61,22 +61,19 @@ export const Index: FC<{}> = () => {
   // true return
   return (
     <Page ClassName={Style.Index}>
-      <div>
+      <div className={Style.Left}>
         <h1>Latest Episode</h1>
-        <h1>All Episode</h1>
+        <Card Episode={latestEpisode} Max/>
       </div>
-      <div className={Style.Episodes}>
-        <div className={Style.Left}>
-          <Card Episode={latestEpisode} Max/>
-        </div>
+
         <div className={Style.Right}>
+          <h1 className={Style.AllEpisodeTitle}>All Episode</h1>
           {
             restEpisodeList.map((episode: Episode, index: number) => {
               return <Card key={index} Episode={episode}/>
             })
           }
         </div>
-      </div>
     </Page>
   )
 }

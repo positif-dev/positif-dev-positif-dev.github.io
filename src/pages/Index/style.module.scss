@@ -2,12 +2,8 @@
 
 @media #{$laptop} {
   .Index {
-    flex-direction: column !important;
-
-    .Episodes {
-      display: flex;
-      flex-direction: row;
-    }
+    flex-direction: row !important;
+    display: flex;
   }
 
   .Left {
@@ -17,19 +13,23 @@
   }
 
   .Right {
-    display: inline-grid;
-    grid-gap: 2%;
-    grid-template-columns: 1fr;
-    grid-auto-flow: dense;
-    margin-left: 2%;
-    max-width: 58%;
-    min-width: 58%;
-    width: 58%;
+    margin-left: 5%;
+    max-width: 53%;
+    min-width: 53%;
+    width: 53%;
+
+    & > div {
+      margin-bottom: 5%;
+    }
   }
 }
 
 @media #{$tab} {
   .Right {
+    & > .AllEpisodeTitle {
+      display: none;
+    }
+
     & > div {
       margin: 10% 0;
     }
