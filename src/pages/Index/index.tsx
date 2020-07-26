@@ -39,9 +39,10 @@ export const Index: FC<{}> = () => {
             image: image,
             date: formattedDate
           }
+          
+          episodeList.push(episode)
 
           setEpisodeList([
-            episode,
             ...episodeList
           ])
         })
@@ -60,7 +61,10 @@ export const Index: FC<{}> = () => {
   // true return
   return (
     <Page ClassName={Style.Index}>
-      <h1>Latest Episode</h1>
+      <div>
+        <h1>Latest Episode</h1>
+        <h1>All Episode</h1>
+      </div>
       <div className={Style.Episodes}>
         <div className={Style.Left}>
           <Card Episode={latestEpisode} Max/>
