@@ -1,0 +1,11 @@
+@import './styles/colors';
+@import './styles/fonts';
+
+html, body {
+  background-color: $dark;
+  color: $light;
+  font-family: $roboto;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}

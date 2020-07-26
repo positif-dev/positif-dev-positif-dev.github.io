@@ -1,0 +1,59 @@
+@import '../../styles/media';
+.Card, .MaxCard {
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,1);
+  }
+}
+
+.MaxCard {
+  & img {
+    max-width: 100%; 
+  }
+
+  & .Title {
+    font-weight: bold;
+    font-size: 1.55rem;
+  }
+
+  & .Description {
+    font-size: 1.25rem;
+    margin-bottom: 5%;
+  }
+}
+
+.Card {
+  display: flex;
+  height: 120px;
+
+  & img {
+    max-width: 120px;
+    margin-right: 5%;
+  }
+
+  & .Title {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  & .Attribute {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+    & .Description {
+      margin-bottom: 5%;
+      overflow: hidden;
+    }
+
+    @media #{$tab} {
+      // & .Description {
+      //   display: none; 
+      // }
+    }
+  }
+}
