@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
 import Style from './style.module.scss'
-import { Card, Page } from '../../components'
+import { Card, Page, Header } from '../../components'
 import { Episode } from '../../types'
 
 export const Index: FC<{}> = () => {
@@ -61,6 +61,8 @@ export const Index: FC<{}> = () => {
   // true return
   return (
     <Page ClassName={Style.Index}>
+      <Header></Header>
+      
       <div className={Style.Left}>
         <h1>Latest Episode</h1>
         <Card Episode={latestEpisode} Max/>
