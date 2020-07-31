@@ -1,5 +1,7 @@
 @import '../../styles/media';
 @import '../../styles/breakpoint';
+@import '../../styles/colors';
+
 .Header {
   display: flex;
   justify-content: space-between;
@@ -27,4 +29,21 @@
   top: 0;
   border-bottom: 1px solid rgba(0,0,0,.15);
   transition:background 0.5s ease;
+
+  .Header-Title {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    align-items: center;
+
+    .logo {
+      width: 36px;
+    }
+
+    .name {
+      margin-left: 12px;
+      font-weight: bold;
+      color: $primary-text-color;
+    }
+  }
 }
