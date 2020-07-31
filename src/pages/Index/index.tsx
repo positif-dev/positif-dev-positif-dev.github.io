@@ -60,13 +60,13 @@ export const Index: FC<{}> = () => {
 
   // true return
   return (
-    <Page ClassName={Style.Index}>
+    <div className = { Style.Parent }>
       <Header></Header>
-      
-      <div className={Style.Left}>
-        <h1>Latest Episode</h1>
-        <Card Episode={latestEpisode} Max/>
-      </div>
+      <Page ClassName={Style.Index}>
+        <div className={Style.Left}>
+          <h1>Latest Episode</h1>
+          <Card Episode={latestEpisode} Max/>
+        </div>
 
         <div className={Style.Right}>
           <h1 className={Style.AllEpisodeTitle}>All Episode</h1>
@@ -76,6 +76,8 @@ export const Index: FC<{}> = () => {
             })
           }
         </div>
-    </Page>
+      </Page>
+    </div>
+    
   )
 }

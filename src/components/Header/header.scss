@@ -2,7 +2,7 @@
 @import '../../styles/breakpoint';
 @import '../../styles/colors';
 
-.Header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,23 +21,23 @@
 
   margin: 0 auto;
   overflow: auto;
-  background:rgba(187, 225, 250, 1.0);
+  // background:rgba(187, 225, 250, 1.0);
   position: fixed;
   z-index: 5;
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-bottom: 2px solid rgba(214, 236, 250, 0.5);
   transition:background 0.5s ease;
 
-  .Header-Title {
+  .header_title {
     display: flex;
     margin-block-start: 1em;
     margin-block-end: 1em;
     align-items: center;
 
     .logo {
-      width: 36px;
+      width: 56px;
     }
 
     .name {
