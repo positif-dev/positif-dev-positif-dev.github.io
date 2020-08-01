@@ -13,7 +13,7 @@ interface IProps {
 export const Card: FC<IProps> = ({ Episode, Max }: IProps) => {
   return (
     <div
-      onClick={() => { window.location.href = Episode.link }}
+      onClick={() => { window.open(Episode.link, '_blank') }}
       className={Max ? Style.MaxCard : Style.Card}>
       <div className = { Style.ImageContainer }>
         <img alt={Style.Title} src={Episode.image} />
