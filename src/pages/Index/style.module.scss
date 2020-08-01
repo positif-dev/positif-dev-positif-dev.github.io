@@ -36,6 +36,9 @@
   }
 }
 
-.parent {
-  display: flex
+.Parent {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position:fixed;
 }

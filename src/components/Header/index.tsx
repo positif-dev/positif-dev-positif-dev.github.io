@@ -13,10 +13,25 @@ export const Header: FC<IProps> = (props) => {
     <header>
       <a
         href = { HOME }
-        className = 'header_title'>
+        className = 'header-title'>
         <img src={Logo} className = 'logo' alt='positif.dev logo'/>
-        <p className='name'>positif.dev</p>
+        <p className = 'name'>positif.dev</p>
       </a>
+
+      <ul className = 'nav-list'>
+        <li>
+          <a className = 'nav-link' href = { HOME }>Home</a>
+        </li>
+        <li>
+          <a className = 'nav-link' href = { HOME }>Episodes</a>
+        </li>
+        <li>
+          <a className = 'nav-link' href = { HOME }>Blog</a>
+        </li>
+        <li>
+          <a className = 'nav-link' href = { HOME }>About Us</a>
+        </li>
+      </ul>
     </header>
   )
 }
