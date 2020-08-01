@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
 import Style from './style.module.scss'
-// import './style.module.scss'
-import { Card, Page, Header } from '../../components'
+import { Card, Page } from '../../components'
 import { Episode } from '../../types'
 
 export const Index: FC<{}> = () => {
@@ -61,16 +60,7 @@ export const Index: FC<{}> = () => {
 
   // true return
   return (
-    <div className = { Style.Parent }>
-      <Header/>
-      <h1 className = { Style.Abc }>abc</h1>
-      {/* <Page ClassName = { Style.Index }>
-        <div className = { Style.Left }>
-          <h1>Latest Episode</h1>
-          <Card Episode={latestEpisode} Max/>
-        </div>
-      </Page>   */}
-      {/* <Page ClassName = { Style.Index }>
+      <Page ClassName = { Style.Index }>
         <div className={Style.Left}>
           <h1>Latest Episode</h1>
           <Card Episode={latestEpisode} Max/>
@@ -85,23 +75,5 @@ export const Index: FC<{}> = () => {
           }
         </div>
       </Page>
-
-      <Page ClassName={Style.Index}>
-        <div className={Style.Left}>
-          <h1>Latest Episode</h1>
-          <Card Episode={latestEpisode} Max/>
-        </div>
-
-        <div className={Style.Right}>
-          <h1 className={Style.AllEpisodeTitle}>All Episode</h1>
-          {
-            restEpisodeList.map((episode: Episode, index: number) => {
-              return <Card key={index} Episode={episode}/>
-            })
-          }
-        </div>
-      </Page> */}
-    </div>
-    
   )
 }
