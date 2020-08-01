@@ -15,7 +15,7 @@ export const Header: FC<IProps> = (props) => {
         href = { HOME }
         className = 'header-title'>
         <img src={Logo} className = 'logo' alt='positif.dev logo'/>
-        <p className = 'name'>positif.dev</p>
+        {/* <p className = 'name'>positif.dev</p> */}
       </a>
 
       <ul className = 'nav-list'>
