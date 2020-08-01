@@ -31,7 +31,7 @@ header {
   right: 0;
   top: 0;
   background: $darker-dark;
-  border-bottom: 2px solid rgba(214, 236, 250, 0.5);
+  border-bottom: 2px solid $light-line;
   transition:background 0.5s ease;
 
   .header-title {
