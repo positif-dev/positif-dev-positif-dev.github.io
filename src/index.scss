@@ -2,10 +2,11 @@
 @import './styles/fonts';
 
 html, body {
-  background-color: $dark;
+  background-color: $darker-dark;
   color: $light;
   font-family: $roboto;
   font-size: 15px;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }

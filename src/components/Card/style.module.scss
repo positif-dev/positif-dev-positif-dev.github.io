@@ -1,9 +1,15 @@
 @import '../../styles/media';
+@import '../../styles/fonts';
+@import '../../styles/colors';
+
 .Card, .MaxCard {
   border-radius: 5px;
+  background-color: $dark;
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 
   &:hover {
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,1);
@@ -12,18 +18,33 @@
 
 .MaxCard {
   & img {
-    max-width: 100%;
-    border: 5px white; 
+    max-width: 70%;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
   }
 
   & .Title {
     font-weight: bold;
     font-size: 1.55rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    font-family: $karla;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $blue;
   }
 
   & .Description {
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     margin-bottom: 5%;
+    font-family: $roboto;
+  }
+
+  & .Icon {
+    margin-right: 10px;
+    display: inline-block;
   }
 }
 
@@ -34,11 +55,17 @@
   & img {
     max-width: 120px;
     margin-right: 5%;
+    border: 1px solid white;
   }
 
   & .Title {
     font-weight: bold;
     font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    font-family: $karla;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $blue;
   }
 
   & .Attribute {
@@ -49,6 +76,7 @@
     & .Description {
       margin-bottom: 5%;
       overflow: hidden;
+      font-family: $roboto;
     }
 
     @media #{$tab} {
@@ -56,5 +84,10 @@
       //   display: none; 
       // }
     }
+  }
+
+  & .Icon {
+    margin-right: 10px;
+    display: inline-block;
   }
 }

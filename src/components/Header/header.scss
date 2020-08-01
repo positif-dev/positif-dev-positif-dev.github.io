@@ -24,14 +24,13 @@ header {
   }
 
   margin: 0 auto;
-  margin-bottom: 10px;
   overflow: auto;
   position: sticky;
   z-index: 5;
   left: 0;
   right: 0;
   top: 0;
-  background: rgba(49, 45, 47, 1.0);
+  background: $darker-dark;
   border-bottom: 2px solid rgba(214, 236, 250, 0.5);
   transition:background 0.5s ease;
 

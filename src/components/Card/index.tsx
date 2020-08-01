@@ -2,6 +2,9 @@ import React, { FC } from 'react'
 import Style from './style.module.scss'
 import { Episode } from '../../types'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendar } from '@fortawesome/free-solid-svg-icons'
+
 interface IProps {
   Episode: Episode,
   Max?: boolean
@@ -24,6 +27,9 @@ export const Card: FC<IProps> = ({ Episode, Max }: IProps) => {
         </div>
 
         <div>
+          <div className = { Style.Icon }>
+            <FontAwesomeIcon icon={faCalendar}/>
+          </div>
           { Episode.date }
         </div>
       </div>
