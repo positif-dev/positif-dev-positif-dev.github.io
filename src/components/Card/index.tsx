@@ -15,7 +15,10 @@ export const Card: FC<IProps> = ({ Episode, Max }: IProps) => {
     <div
       onClick={() => { window.location.href = Episode.link }}
       className={Max ? Style.MaxCard : Style.Card}>
-      <img alt={Style.Title} src={Episode.image} />
+      <div className = { Style.ImageContainer }>
+        <img alt={Style.Title} src={Episode.image} />
+      </div> 
+      
 
       <div className={Style.Attribute}>
         <div className={Style.Title}>
