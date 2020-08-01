@@ -7,8 +7,20 @@ interface IProps {
 }
 
 const HOME = '/'
+const EPISODE = '/ep'
+const BLOG = '/blog'
+const ABOUT = '/about'
+
+const pathLink = window.location.pathname
 
 export const Header: FC<IProps> = (props) => {
+  const baseNavClass = 'nav-link'
+  const activeNavClass = 'nav-link active'
+  const homeClass = pathLink === HOME ? activeNavClass : baseNavClass
+  const episodeClass = pathLink === EPISODE ? activeNavClass : baseNavClass
+  const blogClass = pathLink === BLOG ? activeNavClass : baseNavClass
+  const aboutClass = pathLink === ABOUT ? activeNavClass : baseNavClass
+
   return (
     <header>
       <a
@@ -20,16 +32,16 @@ export const Header: FC<IProps> = (props) => {
 
       <ul className = 'nav-list'>
         <li>
-          <a className = 'nav-link' href = { HOME }>Home</a>
+          <a className = { homeClass } href = { HOME }>Home</a>
         </li>
         <li>
-          <a className = 'nav-link' href = { HOME }>Episodes</a>
+          <a className = { episodeClass } href = { EPISODE }>Episodes</a>
         </li>
         <li>
-          <a className = 'nav-link' href = { HOME }>Blog</a>
+          <a className = { blogClass } href = { BLOG }>Blog</a>
         </li>
         <li>
-          <a className = 'nav-link' href = { HOME }>About Us</a>
+          <a className = { aboutClass } href = { ABOUT }>About Us</a>
         </li>
       </ul>
     </header>

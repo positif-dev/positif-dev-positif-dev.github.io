@@ -92,15 +92,17 @@ header {
         color: $primary-text-color;
         text-decoration: none;
   
-        // &.active {
-        //   font-weight: bold;
-        //   &:hover {
-        //     color: $secondary-text-color;
-        //   }
-        // }
+        &.active {
+          font-weight: bold;
+          color: $blue;
+
+          &:hover {
+            color: $light-yellow;
+          }
+        }
   
         &:hover {
-          color: $blue;
+          color: $light-yellow;
         }
       }
     }
