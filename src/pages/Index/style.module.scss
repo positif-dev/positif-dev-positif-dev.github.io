@@ -38,7 +38,10 @@
 
 .Parent {
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position:fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.Abc {
+  display: flex;
 }

@@ -22,6 +22,7 @@ header {
   }
 
   margin: 0 auto;
+  margin-bottom: 10px;
   overflow: auto;
   position: fixed;
   z-index: 5;
@@ -92,7 +93,7 @@ header {
         // &.active {
         //   font-weight: bold;
         //   &:hover {
-        //     color: $color-secondary-text;
+        //     color: $secondary-text-color;
         //   }
         // }
   
