@@ -17,9 +17,9 @@ export const Header: FC<IProps> = (props) => {
   const baseNavClass = 'nav-link'
   const activeNavClass = 'nav-link active'
   const homeClass = pathLink === HOME ? activeNavClass : baseNavClass
-  const episodeClass = pathLink === EPISODE ? activeNavClass : baseNavClass
-  const blogClass = pathLink === BLOG ? activeNavClass : baseNavClass
-  const aboutClass = pathLink === ABOUT ? activeNavClass : baseNavClass
+  // const episodeClass = pathLink === EPISODE ? activeNavClass : baseNavClass
+  // const blogClass = pathLink === BLOG ? activeNavClass : baseNavClass
+  // const aboutClass = pathLink === ABOUT ? activeNavClass : baseNavClass
 
   return (
     <header>
@@ -34,7 +34,7 @@ export const Header: FC<IProps> = (props) => {
         <li>
           <a className = { homeClass } href = { HOME }>Home</a>
         </li>
-        <li>
+        {/* <li>
           <a className = { episodeClass } href = { EPISODE }>Episodes</a>
         </li>
         <li>
@@ -42,7 +42,7 @@ export const Header: FC<IProps> = (props) => {
         </li>
         <li>
           <a className = { aboutClass } href = { ABOUT }>About Us</a>
-        </li>
+        </li> */}
       </ul>
     </header>
   )
