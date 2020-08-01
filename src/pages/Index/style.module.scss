@@ -1,0 +1,47 @@
+@import '../../styles/media';
+
+@media #{$laptop} {
+  .Index {
+    flex-direction: row !important;
+    display: flex;
+  }
+
+  .Left {
+    max-width: 40%;
+    min-width: 40%;
+    width: 40%;
+  }
+
+  .Right {
+    margin-left: 5%;
+    max-width: 53%;
+    min-width: 53%;
+    width: 53%;
+
+    & > div {
+      margin-bottom: 5%;
+    }
+  }
+}
+
+@media #{$tab} {
+  .Right {
+    & > .AllEpisodeTitle {
+      display: none;
+    }
+
+    & > div {
+      margin: 10% 0;
+    }
+  }
+}
+
+.Parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Abc {
+  display: flex;
+}

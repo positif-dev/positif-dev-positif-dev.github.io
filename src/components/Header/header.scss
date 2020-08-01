@@ -1,0 +1,110 @@
+@import '../../styles/media';
+@import '../../styles/breakpoint';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $karla;
+
+  @media (min-width:$breakpoint-medium-min) {
+    width: 750px;
+  }
+
+  @media (min-width:$breakpoint-large-min) {
+    // width: 970px;
+    width: 1060px;
+  }
+
+  @media (min-width:$breakpoint-xlarge) {
+    // width: 1170px;
+    width: 1340px;
+  }
+
+  margin: 0 auto;
+  overflow: auto;
+  position: sticky;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: $darker-dark;
+  border-bottom: 2px solid rgba(214, 236, 250, 0.5);
+  transition:background 0.5s ease;
+
+  .header-title {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    align-items: center;
+    text-decoration: none;
+
+    .logo {
+      margin-left: 12px;
+      width: 56px;
+
+      @media only screen and (max-width: $breakpoint-medium-max) {
+        width: 36px;
+      }
+    }
+
+    .name {
+      margin-left: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      color: $primary-text-color;
+
+      @media only screen and (max-width: $breakpoint-medium-max) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .nav-list {
+    float: right;
+    list-style: none;
+    display: table;
+
+    @media only screen and (max-width: $breakpoint-medium-max) {
+      padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin: 16px auto;
+      float: none;
+    }
+
+    li {
+      position: relative;
+      padding: 0 20px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 18px;
+
+      @media only screen and (max-width: $breakpoint-medium-max) {
+        font-size: 14px;
+        padding: 0 8px;
+      }
+
+      .nav-link {
+        color: $primary-text-color;
+        text-decoration: none;
+  
+        &.active {
+          font-weight: bold;
+          color: $blue;
+
+          &:hover {
+            color: $light-yellow;
+          }
+        }
+  
+        &:hover {
+          color: $light-yellow;
+        }
+      }
+    }
+  }
+}
