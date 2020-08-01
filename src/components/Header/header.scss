@@ -14,11 +14,13 @@ header {
   }
 
   @media (min-width:$breakpoint-large-min) {
-    width: 970px;
+    // width: 970px;
+    width: 1060px;
   }
 
   @media (min-width:$breakpoint-xlarge) {
-    width: 1170px;
+    // width: 1170px;
+    width: 1340px;
   }
 
   margin: 0 auto;
@@ -29,6 +31,7 @@ header {
   left: 0;
   right: 0;
   top: 0;
+  background: rgba(49, 45, 47, 1.0);
   border-bottom: 2px solid rgba(214, 236, 250, 0.5);
   transition:background 0.5s ease;
 
