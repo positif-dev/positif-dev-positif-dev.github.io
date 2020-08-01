@@ -7,9 +7,9 @@ interface IProps {
 }
 
 const HOME = '/'
-const EPISODE = '/ep'
-const BLOG = '/blog'
-const ABOUT = '/about'
+// const EPISODE = '/ep'
+// const BLOG = '/blog'
+// const ABOUT = '/about'
 
 const pathLink = window.location.pathname
 
