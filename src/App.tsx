@@ -10,7 +10,9 @@ const GA_TRACKING_ID_PROD = 'UA-176048075-1'
 // const GA_TRACKING_ID = process.env.NODE_ENV === 'production' ? GA_TRACKING_ID_PROD : GA_TRACKING_ID_DEV 
 const GA_TRACKING_ID = GA_TRACKING_ID_PROD
 
-ReactGA.initialize(GA_TRACKING_ID)
+if(process.env.NODE_ENV === 'production') {
+  ReactGA.initialize(GA_TRACKING_ID)
+}
 
 export const App: React.FC<{}> = () => {
   console.log('logo by:', 'jessicajimantoro@gmail.com')

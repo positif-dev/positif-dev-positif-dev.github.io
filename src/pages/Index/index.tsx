@@ -7,7 +7,9 @@ import ReactGA from 'react-ga'
 
 export const PageView = () => {
   const pathName = window.location.pathname + window.location.search
-  ReactGA.pageview(pathName)
+  if(process.env.NODE_ENV === 'production') {
+    ReactGA.pageview(pathName)
+  }
 }
 
 export const Index: FC<{}> = () => {
