@@ -3,12 +3,22 @@ import Style from './style.module.scss'
 import { Card, Page } from '../../components'
 import { Episode } from '../../types'
 
+import ReactGA from 'react-ga'
+
+export const PageView = () => {
+  const pathName = window.location.pathname + window.location.search
+  ReactGA.pageview(pathName)
+}
+
 export const Index: FC<{}> = () => {
   // state
   const [episodeList, setEpisodeList] = useState<Episode[]>([])
 
   // componentDidMount, do not remove [] in the second argument.
   useEffect(() => {
+    //pageview GA
+    PageView()
+
     const $  = (root: any, el: string) => root.querySelector(el)
     const $$ = (root: any, el: string) => root.querySelectorAll(el)
     const RSS_URL = 'https://anchor.fm/s/2a147024/podcast/rss'
