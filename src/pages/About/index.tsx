@@ -27,15 +27,13 @@ export const About: FC<IProps> = (props) => {
         About Us
       </h2>
 
+      <div className = { Style.gridContainer }>
       {
         members.map((m: Member, index: number) => {
           return <AboutUsCard key = { index } Member = { m }/>
         })
       }
-      
+      </div>
     </div>
-    // <div className={`${Style.Page} ${props.ClassName || ''}`}>
-    //   { props.children }
-    // </div>
   )
 }
