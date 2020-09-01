@@ -1,0 +1,71 @@
+@import '../../styles/media';
+@import '../../styles/fonts';
+@import '../../styles/colors';
+
+.Card {
+  border-radius: 5px;
+  background-color: $dark;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+
+  &:hover {
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,1);
+  }
+}
+
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 200px;
+  margin: 20px;
+
+  & .ImageContainer {
+    margin-right: 5%;
+  }
+
+  & img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+
+  & .Title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    font-family: $karla;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $light;
+  }
+
+  & .Attribute {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+    & .Description {
+      margin-bottom: 5%;
+      overflow: hidden;
+      font-family: $roboto;
+    }
+
+    @media #{$tab} {
+      // & .Description {
+      //   display: none; 
+      // }
+    }
+  }
+
+  & .Icon {
+    margin-right: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+  }
+}
