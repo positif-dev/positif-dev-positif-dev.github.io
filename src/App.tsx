@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Header, Footer } from './components'
-import { Index, NotFound } from './pages'
+import { Index, NotFound, About } from './pages'
 import ReactGA from 'react-ga'
 
 const GA_TRACKING_ID_PROD = 'UA-176048075-1'
@@ -25,9 +25,13 @@ export const App: React.FC<{}> = () => {
         <Route exact path='/'>
           <Index />
         </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
         <Route path='*'>
           <NotFound />
         </Route>
+        
       </Switch>
       <Footer />
     </Router>
