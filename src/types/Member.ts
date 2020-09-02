@@ -4,5 +4,6 @@ export type Member = {
   image: string,
   github?: string,
   linkedin?: string,
-  website?: string
+  website?: string,
+  medium?: string
 }

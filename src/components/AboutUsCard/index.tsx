@@ -3,7 +3,7 @@ import Style from './style.module.scss'
 import { Member } from '../../types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 interface IProps {
@@ -25,7 +25,7 @@ export const AboutUsCard: FC<IProps> = ({ Member }: IProps) => {
         {
           Member.github !== undefined && (
             <div className = { Style.Social }>
-              <a href = { Member.github }>
+              <a href = { Member.github } target = '_blank' rel="noopener noreferrer">
                 <div className = { Style.Icon }>
                   <FontAwesomeIcon icon = { faGithub } />
                 </div>
@@ -38,7 +38,7 @@ export const AboutUsCard: FC<IProps> = ({ Member }: IProps) => {
         {
           Member.linkedin !== undefined && (
             <div className = { Style.Social }>
-              <a href = { Member.linkedin }>
+              <a href = { Member.linkedin } target = '_blank' rel="noopener noreferrer">
                 <div className = { Style.Icon }>
                   <FontAwesomeIcon icon = { faLinkedinIn } />
                 </div>
@@ -49,9 +49,22 @@ export const AboutUsCard: FC<IProps> = ({ Member }: IProps) => {
         }
 
         {
+          Member.medium !== undefined && (
+            <div className = { Style.Social }>
+              <a href = { Member.medium } target = '_blank' rel="noopener noreferrer">
+                <div className = { Style.Icon }>
+                  <FontAwesomeIcon icon = { faMedium } />
+                </div>
+                Medium
+              </a>
+            </div>
+          )
+        }
+
+        {
           Member.website !== undefined && (
             <div className = { Style.Social }>
-              <a href = { Member.website }>
+              <a href = { Member.website } target = '_blank' rel="noopener noreferrer">
                 <div className = { Style.Icon }>
                   <FontAwesomeIcon icon = { faGlobe } />
                 </div>

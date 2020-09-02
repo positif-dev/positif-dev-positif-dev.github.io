@@ -11,15 +11,19 @@ const members: Member[] = [
   {
     name: 'Clavin June',
     description: 'Software Engineer',
-    image: 'https://picsum.photos/200/300'
+    image: 'jun.jpeg',
+    github: 'https://github.com/ClavinJune',
+    linkedin: 'https://www.linkedin.com/in/juneardoc/',
+    website: 'https://clavinjune.dev',
+    medium: 'https://medium.com/@clavinjune'
   },
   {
     name: 'Devin Ryan Riota',
     description: 'Software Engineer',
-    image: 'https://picsum.photos/200/300',
-    github: 'https://google.com',
-    linkedin: 'https://google.com',
-    website: 'https://google.com'
+    image: 'devin.jpg',
+    github: 'https://github.com/devinryanriota',
+    linkedin: 'https://www.linkedin.com/in/devinryanriota/',
+    medium: 'https://medium.com/@devinryanriota'
   },
 ]
 
