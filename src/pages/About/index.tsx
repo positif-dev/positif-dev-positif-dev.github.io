@@ -1,8 +1,16 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import Style from './style.module.scss'
 import { Member } from '../../types'
 import { AboutUsCard } from '../../components'
 
+import ReactGA from 'react-ga'
+
+export const PageViewAbout = () => {
+  const pathName = window.location.pathname + window.location.search
+  if(process.env.NODE_ENV === 'production') {
+    ReactGA.pageview(pathName)
+  }
+}
 interface IProps {
   ClassName?: string
 }
@@ -28,6 +36,10 @@ const members: Member[] = [
 ]
 
 export const About: FC<IProps> = (props) => {
+  useEffect(() => {
+    PageViewAbout()
+  }, [])
+
   return (
     <div className = { Style.container }>
       <h2 style = {{ textAlign: 'center' }}>
