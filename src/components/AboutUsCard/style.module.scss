@@ -3,68 +3,60 @@
 @import '../../styles/colors';
 
 .Card {
-  border-radius: 5px;
   background-color: $dark;
-  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
-  cursor: pointer;
-  padding: 20px;
-  text-align: justify;
-  text-justify: inter-word;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 0 36px 24px;
+  min-width: 0;
 
   &:hover {
-  box-shadow: 5px 5px 20px 0px rgba(0,0,0,1);
-  }
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,1);
+    }
 }
 
-.Card {
-  display: flex;
-  width: 40%;
-  height: 200px;
-  margin: 20px;
+.MemberImage {
+  width: 260px;
+  height: 260px;
+  border-radius: 8px 8px 0 0;
+}
 
-  & .ImageContainer {
-    margin-right: 5%;
-  }
+.TextContainer {
+  padding: 2px 16px;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
 
-  & img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid white;
-    border-radius: 8px;
-  }
+.Title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  font-family: $karla;
+  padding-bottom: 1px;
+  border-bottom: 1px solid $light;
+  margin-bottom: 16px;
+}
 
-  & .Title {
-    font-weight: bold;
-    font-size: 1.25rem;
-    align-items: center;
-    justify-content: center;
-    font-family: $karla;
-    padding-bottom: 1px;
-    border-bottom: 1px solid $light;
-  }
+.Description {
+  font-family: $roboto;
+  margin-bottom: 16px;
+}
 
-  & .Attribute {
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
+.Icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  display: inline-block;
+}
 
-    & .Description {
-      margin-bottom: 5%;
-      overflow: hidden;
-      font-family: $roboto;
-    }
+.Social {
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: $primary-text-color;
 
-    @media #{$tab} {
-      // & .Description {
-      //   display: none; 
-      // }
-    }
-  }
-
-  & .Icon {
-    margin-right: 10px;
-    display: inline-block;
-    width: 200px;
-    height: 200px;
+  & a {
+    text-decoration: none;
+    color: $blue;
   }
 }

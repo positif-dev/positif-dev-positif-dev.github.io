@@ -16,7 +16,10 @@ const members: Member[] = [
   {
     name: 'Devin Ryan Riota',
     description: 'Software Engineer',
-    image: 'https://picsum.photos/200/300'
+    image: 'https://picsum.photos/200/300',
+    github: 'https://google.com',
+    linkedin: 'https://google.com',
+    website: 'https://google.com'
   },
 ]
 
