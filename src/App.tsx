@@ -19,7 +19,7 @@ export const App: React.FC<{}> = () => {
   console.log('content by:', ' devinryanriota@gmail.com, me@clavinjune.dev')
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Switch>
         <Route exact path='/'>
