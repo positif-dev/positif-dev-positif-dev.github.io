@@ -15,6 +15,7 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 export const App: React.FC<{}> = () => {
+  console.log('pub_url', process.env.PUBLIC_URL)
   console.log('logo by:', 'jessicajimantoro@gmail.com')
   console.log('content by:', ' devinryanriota@gmail.com, me@clavinjune.dev')
 

@@ -6,10 +6,10 @@ interface IProps {
   ClassName?: string
 }
 
-const HOME = '/'
+const HOME = `${process.env.PUBLIC_URL}/`
 // const EPISODE = '/ep'
 // const BLOG = '/blog'
-const ABOUT = '/about'
+const ABOUT = `${process.env.PUBLIC_URL}/about`
 
 const pathLink = window.location.pathname
 
