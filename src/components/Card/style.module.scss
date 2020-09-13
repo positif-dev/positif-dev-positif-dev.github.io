@@ -44,6 +44,11 @@
     font-size: 1.10rem;
     margin-bottom: 5%;
     font-family: $roboto;
+
+    & a {
+      text-decoration: none;
+      color: lightblue;
+    }
   }
 
   & .Icon {
